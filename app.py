@@ -157,6 +157,11 @@ def add_blog():
 
     return jsonify("a new blog has been posted.")
 
+@app.route('/blog/get', methods=['GET'])
+def get_blogs():
+    blogs = db.session.query(Blog).all()
+    return jsonify(multiple_blog_schema.dump(blogs))
+
 @app.route('/review/add', methods=['POST'])
 def add_review():
 
