@@ -176,14 +176,14 @@ def add_review():
 
     return jsonify("a new review has been posted.")
 
-@pp.route('/blog/delete/<id>', methods=['DELETE'])
-def delete_blog(id):
+# @pp.route('/blog/delete/<id>', methods=['DELETE'])
+# def delete_blog(id):
 
-    blog = db.session.query(Blog).filter(Blog.id == id).first()
-    db.session.delete(blog)
-    db.session.commit()
+#     blog = db.session.query(Blog).filter(Blog.id == id).first()
+#     db.session.delete(blog)
+#     db.session.commit()
 
-    return jsonify("a blog has been deleted.")
+#     return jsonify("a blog has been deleted.")
 
 
 
